@@ -7,4 +7,4 @@ This application is built using nodejs/express with mongodb. To run this applica
 3. copy  `.env.example` to `.env` and populate the fields
 4. run `npm start` or `yarn start` 
 
-This project is hosted live on heroku at (https://mysterious-dusk-80736.herokuapp.com)[https://mysterious-dusk-80736.herokuapp.com]. It has just one `POST` endpoint available at (https://mysterious-dusk-80736.herokuapp.com/api/v1/filter)[https://mysterious-dusk-80736.herokuapp.com/api/v1/filter]
+This project is hosted live on heroku at [https://mysterious-dusk-80736.herokuapp.com](https://mysterious-dusk-80736.herokuapp.com). It has just one `POST` endpoint available at [https://mysterious-dusk-80736.herokuapp.com/api/v1/filter](https://mysterious-dusk-80736.herokuapp.com/api/v1/filter)
