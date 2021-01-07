@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-import app from "app.js";
+const app = require("./app");
 
 function startDB() {
   mongoose.set("useCreateIndex", true);
@@ -17,4 +17,4 @@ function startDB() {
   });
 }
 
-export default startDB;
+module.exports = startDB;
