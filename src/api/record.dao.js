@@ -4,9 +4,10 @@ const RecordModel = require('./record.model');
 
 class RecordDao {
 	static async filterTasks(filterParams) {
+		RecordDao.validateParams(filterParams);
+		
 		const { startDate, endDate, minCount, maxCount } = filterParams;
 	
-
 		let records = await RecordModel.find({
 			createdAt: {
 				$gte: new Date(new Date(startDate).setHours(0, 0, 0)),
@@ -23,6 +24,15 @@ class RecordDao {
 
 
 		return records;
+	}
+
+
+	static validateParams(filterParams) {
+		const { startDate, endDate, minCount, maxCount } = filterParams;
+		
+		if (!startDate || !endDate || !minCount || !maxCount) {
+			throw new Error("Invalid search params");
+		}
 	}
 }
 
